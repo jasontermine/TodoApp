@@ -7,11 +7,11 @@ Multiuser TODO App wobei ein Admin / CEOs TODOs erstellen können und Ihren Empl
 - CEO / Admin  
 - Employee
 
+<!--
 ## User Stories
 - CEO / Admin kann TODO's erstellen und den Mitarbeiter zuweisen
 - Employees können ihre zugewiesenen TODOs nur einsehen
 
-<!--
 ## Images
 
 ![This is an alt text.](/image/sample.webp "This is a sample image.")
