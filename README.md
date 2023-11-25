@@ -9,7 +9,7 @@ Multiuser TODO App wobei ein Admin / CEOs TODOs erstellen können und Ihren Empl
 
 # Installationsanleitung
 
-### Repositroy klonen
+### Repository klonen
 ```
 git clone https://github.com/jasontermine/TodoApp.git
 ```
