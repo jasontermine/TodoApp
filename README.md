@@ -7,7 +7,7 @@ Multiuser TODO App wobei ein Admin / CEOs TODOs erstellen können und Ihren Empl
 - CEO / Admin  
 - Employee
 
-# Installationsanleitung TEST TEST TEST
+# Installationsanleitung
 
 ### Repository klonen
 ```
