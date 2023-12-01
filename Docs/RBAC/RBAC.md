@@ -1,1 +1,1 @@
-<img src="resources\RBAC.png"></img>
+<img src="..\resources\RBAC.png"></img>
