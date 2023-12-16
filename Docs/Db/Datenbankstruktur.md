@@ -82,11 +82,11 @@
   </tr>
   <tr>
     <td>status_id</td>
-    <td>todo_id FK</td>
+    <td>status_id FK</td>
   </tr>
   <tr>
-    <td>status_id</td>
-    <td>status_id FK</td>
+    <td>todo_id</td>
+    <td>todo_id FK</td>
   </tr>
   <tr>
 </table> 
