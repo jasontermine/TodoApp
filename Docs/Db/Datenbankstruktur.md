@@ -60,15 +60,15 @@
     <td>long AUTO_INCREMENT PK</td>
   </tr>
   <tr>
+    <td>Name</td>
+    <td>VARCHAR(100)</td>
+  </tr>
+  <tr>
     <td>Message</td>
     <td>TEXT(1000)</td>
   </tr>
   <tr>
     <td>Status</td>
     <td>ENUM ('Offen', 'In bearbeitung', 'Abgeschlossen')</td>
-  </tr>
-  <tr>
-    <td>RefferredTo</td>
-    <td>EmployeeID FK</td>
   </tr>
 </table> 
