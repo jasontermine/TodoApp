@@ -45,10 +45,6 @@
     <td>UserRole</td>
     <td>ENUM('1', '2')</td>
   </tr>
-  <tr>
-    <td>Referrer</td>
-    <td>AdminID FK</td>
-  </tr>
 </table> 
 
 <table>
