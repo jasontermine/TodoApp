@@ -74,22 +74,7 @@
     <td>ENUM('STATUS_OFFEN', 'STATUS_IN_BEARBEITUNG', 'STATUS_ABGESCHLOSSEN')</td>
   </tr>
   <tr>
-</table> 
-
-<table>
-  <tr>
-    <th colspan="2">status_todo</th>
-  </tr>
-  <tr>
-    <td>status_id</td>
-    <td>status_id FK</td>
-  </tr>
-  <tr>
-    <td>todo_id</td>
-    <td>todo_id FK</td>
-  </tr>
-  <tr>
-</table> 
+</table>
 
 <table>
   <tr>
