@@ -43,7 +43,7 @@
   <tr>
   <tr>
     <td>UserRole</td>
-    <td>ENUM('1', '2')</td>
+    <td>ENUM('Admin', 'Employee')</td>
   </tr>
 </table> 
 
