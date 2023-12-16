@@ -22,10 +22,6 @@
     <td>UserRole</td>
     <td>ENUM('Admin', 'Employee') </td>
   </tr>
-  <tr>
-    <td>Token</td>
-    <td>TokenID FK </td>
-  </tr>
 </table> 
 
 <table>
@@ -52,10 +48,6 @@
   <tr>
     <td>Referrer</td>
     <td>AdminID FK</td>
-  </tr>
-    <tr>
-    <td>Token</td>
-    <td>TokenID FK </td>
   </tr>
 </table> 
 
