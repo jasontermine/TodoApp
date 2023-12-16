@@ -56,7 +56,7 @@
   </tr>
   <tr>
     <td>name</td>
-    <td>ENUM('ADMIN', 'USER')</td>
+    <td>ENUM('ROLE_ADMIN', 'ROLE_USER')</td>
   </tr>
   <tr>
 </table> 
