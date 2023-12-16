@@ -80,12 +80,3 @@
     <td>EmployeeID FK</td>
   </tr>
 </table> 
-<table>
-  <tr>
-    <th colspan="2">Token</th>
-  </tr>
-  <tr>
-    <td>TokenID</td>
-    <td>long PK</td>
-  </tr>
-</table> 
