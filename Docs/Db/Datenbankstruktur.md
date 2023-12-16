@@ -81,8 +81,8 @@
     <th colspan="2">status_todo</th>
   </tr>
   <tr>
-    <td>user_id</td>
-    <td>user_id FK</td>
+    <td>status_id</td>
+    <td>todo_id FK</td>
   </tr>
   <tr>
     <td>status_id</td>
