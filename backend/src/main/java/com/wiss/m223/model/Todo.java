@@ -1,5 +1,7 @@
 package com.wiss.m223.model;
 
+import com.wiss.m223.model.Status.EStatus;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,6 +36,14 @@ public class Todo {
         this.message = message;
         this.status = status;
     }
+    
+    public Todo(String name, String message) {
+        this.name = name;
+        this.message = message;
+        this.status = new Status(EStatus.STATUS_OFFEN);
+    }
+
+    public Todo() {}
 
     @ManyToOne
     @JoinColumn(name = "status_id")

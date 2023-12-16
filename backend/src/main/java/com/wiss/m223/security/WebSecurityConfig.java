@@ -23,10 +23,9 @@ public class WebSecurityConfig {
     private UserDetailsServiceImpl userDetailsService;
     @Autowired
     private AuthenticationEntryPoint unauthorizedHandler;
-    private final static String[] EVERYONE = { "/public", "/category", "/quiz", "/api/auth/**", };
-    // private final static String[] EVERYONE = { "/public", "/private", "/admin" };
-    private final static String[] SECURE = { "/question", "/private", "/admin" };
-    private final static String[] ROLES = { "USER", "MODERATOR", "ADMIN" };
+    private final static String[] EVERYONE = { "/public", "/api/auth/**", "/admin/**" };
+    private final static String[] SECURE = { "/user", "/admin" };
+    private final static String[] ROLES = { "ROLE_USER", "ROLE_ADMIN" };
 
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
