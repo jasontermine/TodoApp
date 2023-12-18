@@ -31,7 +31,7 @@ public class AdminController {
 		return new ResponseEntity<>(todos, HttpStatus.OK);
 	}
 
-	@PostMapping("/todos")
+	@PostMapping("/todos/create")
 	public ResponseEntity<Todo> createTodo(@RequestBody Todo todo) {
 
 		Todo _todo = todoRepository.save(todo);
@@ -46,7 +46,6 @@ public class AdminController {
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-
 	}
 	
 }
