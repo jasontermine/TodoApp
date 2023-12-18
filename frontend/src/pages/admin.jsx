@@ -28,7 +28,7 @@ import { useState } from "react";
 export default function Admin() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [id, setStatusId] = useState(0);
+  const [id, setStatusId] = useState();
 
   const navigate = useNavigate();
 
@@ -76,7 +76,10 @@ export default function Admin() {
 
   return (
     <>
+    <div className="position-absolute start-50 top-50" style={{ marginLeft: "-12rem", marginTop: "-13rem"}}>
       <MDBBtn onClick={toggleOpen}>Todo Erstellen</MDBBtn>
+      <MDBBtn className="ms-3" onClick={toggleOpen2}>Todo löschen</MDBBtn>
+    </div>
 
       {/* Modal 1 For POST */}
       <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex="-1">
@@ -88,27 +91,27 @@ export default function Admin() {
             <MDBModalBody>
               <MDBRow
                 tag="form"
-                className="form-control form-control-lg"
+                className="form-control "
                 noValidate
                 onSubmit={handleSubmitCreate}
               >
                 <MDBInput
                   label="Name"
-                  className="form-control form-control-lg"
+                  className="form-control mt-4 mb-5"
                   onChange={onChangeName}
                   value={name}
                   required
                 />
                 <MDBInput
                   label="Message"
-                  className="form-control form-control-lg"
+                  className="form-control  mb-5"
                   onChange={onChangeMessage}
                   value={message}
                   required
                 />
                 <MDBInput
-                  label="Id"
-                  className="form-control form-control-lg"
+                  label="Id (1 = Offen, 2 = In Bearbeitung, 3 = Abgeschlossen)"
+                  className="form-control mb-4"
                   onChange={onChangeStatusId}
                   value={id}
                   required
@@ -125,8 +128,6 @@ export default function Admin() {
         </MDBModalDialog>
       </MDBModal>
 
-      <MDBBtn onClick={toggleOpen2}>Todo löschen</MDBBtn>
-
       {/* Modal 2 For DELETE */}
       <MDBModal open={basicModal2} setOpen={setBasicModal2} tabIndex="-2">
         <MDBModalDialog>
@@ -137,14 +138,14 @@ export default function Admin() {
             <MDBModalBody>
               <MDBRow
                 tag="form"
-                className="form-control form-control-lg"
+                className="form-control"
                 noValidate
                 onSubmit={handleSubmitDelete}
               >
                 <MDBInput
                   label="Id"
-                  className="form-control form-control-lg"
                   onChange={onChangeStatusId}
+                  className="mb-4 mt-4"
                   value={id}
                   required
                 />
