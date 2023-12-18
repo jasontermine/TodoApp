@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>id</td>
-    <td>long AUTO_INCREMENT PK</td>
+    <td>INT NOT AUTO_INCREMENT PK</td>
   </tr>
   <tr>
     <td>username</td>
@@ -30,7 +30,7 @@
   </tr>
   <tr>
     <td>id</td>
-    <td>long AUTO_INCREMENT PK</td>
+    <td>int NOT NULL AUTO_INCREMENT PK</td>
   </tr>
   <tr>
     <td>name</td>
@@ -42,7 +42,7 @@
   </tr>
   <tr>
     <td>status</td>
-    <td>Status FK</td>
+    <td>status_id FK</td>
   </tr>
 </table> 
 
@@ -52,7 +52,7 @@
   </tr>
   <tr>
     <td>id</td>
-    <td>long AUTO_INCREMENT PK</td>
+    <td>int NOT NULL AUTO_INCREMENT PK</td>
   </tr>
   <tr>
     <td>name</td>
@@ -67,7 +67,7 @@
   </tr>
   <tr>
     <td>id</td>
-    <td>long AUTO_INCREMENT PK</td>
+    <td>int NOT NULL AUTO_INCREMENT PK</td>
   </tr>
   <tr>
     <td>name</td>
