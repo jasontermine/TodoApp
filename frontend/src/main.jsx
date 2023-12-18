@@ -11,25 +11,26 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import Layout from "./components/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    element: <Layout><Login /></Layout>
   },
   {
     path: "/public",
     loader: public_loader,
-    element: <Public />
+    element: <Layout><Public /></Layout>
   },
   {
     path: "/private",
     loader: private_loader,
-    element: <Private />
+    element: <Layout><Private /></Layout>
   },
   {
     path: "/admin",
-    element: <Admin />
+    element: <Layout><Admin /></Layout>
   },
 ]);
 
