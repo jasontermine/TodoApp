@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>id</td>
-    <td>INT NOT NULL AUTO_INCREMENT PK</td>
+    <td>int NOT NULL AUTO_INCREMENT PK</td>
   </tr>
   <tr>
     <td>username</td>
