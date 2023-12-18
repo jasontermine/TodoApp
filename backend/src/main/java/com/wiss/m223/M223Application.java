@@ -1,3 +1,7 @@
+/**
+ * Diese Klasse repräsentiert die Hauptanwendungsklasse für die M223-Anwendung.
+ * Sie ist dafür verantwortlich, die Spring Boot-Anwendung zu starten und CORS (Cross-Origin Resource Sharing) zu konfigurieren.
+ */
 package com.wiss.m223;
 
 import org.springframework.boot.SpringApplication;
@@ -14,8 +18,9 @@ public class M223Application {
 	}
 	
 	/**
-	 * enable Cors requests from react FE
-	 * @return
+	 * Konfiguriert CORS (Cross-Origin Resource Sharing) für die Anwendung.
+	 * Diese Methode erlaubt Anfragen von den angegebenen Ursprüngen auf die angegebenen Endpunkte zuzugreifen.
+	 * @return Die konfigurierte WebMvcConfigurer-Instanz.
 	 */
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
