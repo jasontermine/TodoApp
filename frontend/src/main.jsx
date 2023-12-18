@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import Public, { loader as public_loader} from "./pages/public";
 import Private, { loader as private_loader} from "./pages/private";
 import Login from "./pages/login";
