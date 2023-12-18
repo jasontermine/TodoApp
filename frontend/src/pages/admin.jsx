@@ -152,7 +152,7 @@ export default function Admin() {
               </MDBRow>
             </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color="secondary" onClick={toggleOpen}>
+              <MDBBtn color="secondary" onClick={toggleOpen2}>
                 Close
               </MDBBtn>
               <MDBBtn onClick={handleSubmitDelete}>Löschen</MDBBtn>
