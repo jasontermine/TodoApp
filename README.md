@@ -1,3 +1,9 @@
+### Fehlt noch:
+- Code kommentieren
+- Frontend Test
+- Hilfestellungen
+- Allgemeine Doku erweitern
+
 # Todo App
 
 ## Informieren
