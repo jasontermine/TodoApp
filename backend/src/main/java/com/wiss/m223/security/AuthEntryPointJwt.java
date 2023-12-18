@@ -10,13 +10,10 @@ import io.jsonwebtoken.io.IOException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// 
-//  Handle Authentication Exception
-//  override the commence() method.
-//  This method is triggered anytime an unauthenticated User requests a secured
-//  HTTP resource
-//  and an AuthenticationException is thrown
-//  
+/**
+ * Diese Klasse implementiert das AuthenticationEntryPoint-Interface und dient als Einstiegspunkt für die Authentifizierung.
+ * Sie wird verwendet, um den Benutzer zu authentifizieren und eine Fehlermeldung zurückzugeben, wenn die Authentifizierung fehlschlägt.
+ */
 @Component
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
     private static final Logger logger = LoggerFactory.getLogger(AuthEntryPointJwt.class);

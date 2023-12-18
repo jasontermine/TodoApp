@@ -16,6 +16,9 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+/**
+ * Diese Klasse konfiguriert die Web-Sicherheit für die Anwendung.
+ */
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
@@ -27,11 +30,19 @@ public class WebSecurityConfig {
     private final static String[] SECURE = { "/private/todo", "/admin/**" };
     private final static String[] ROLES = { "ROLE_USER", "ROLE_ADMIN" };
 
+    /**
+     * Erstellt einen AuthTokenFilter Bean.
+     * @return Der erstellte AuthTokenFilter.
+     */
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
     }
 
+    /**
+     * Erstellt einen DaoAuthenticationProvider Bean.
+     * @return Der erstellte DaoAuthenticationProvider.
+     */
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
@@ -40,19 +51,32 @@ public class WebSecurityConfig {
         return authProvider;
     }
 
+    /**
+     * Erstellt einen AuthenticationManager Bean.
+     * @param authConfig Die AuthenticationConfiguration.
+     * @return Der erstellte AuthenticationManager.
+     * @throws Exception Wenn ein Fehler beim Erstellen des AuthenticationManagers auftritt.
+     */
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
     }
 
-    // Verschlüsselt das Passwort
+    /**
+     * Erstellt einen PasswordEncoder Bean.
+     * @return Der erstellte PasswordEncoder.
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // URLs in der Everyone Variable sind für alle zugänglich.
-    // Alle anderen müssen sich authentifizieren
+    /**
+     * Erstellt einen SecurityFilterChain Bean.
+     * @param http Die HttpSecurity.
+     * @return Der erstellte SecurityFilterChain.
+     * @throws Exception Wenn ein Fehler beim Erstellen des SecurityFilterChains auftritt.
+     */
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable()).cors(Customizer.withDefaults())

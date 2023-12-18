@@ -1,3 +1,9 @@
+/**
+ * Der AuthTokenFilter ist ein Filter, der eingehende HTTP-Anfragen überprüft und den Benutzer authentifiziert, 
+ * falls ein gültiges JWT-Token vorhanden ist. 
+ * 
+ * Erweitert die OncePerRequestFilter-Klasse, um sicherzustellen, dass der Filter nur einmal pro Anfrage ausgeführt wird.
+ */
 package com.wiss.m223.security;
 
 import org.slf4j.Logger;
@@ -16,9 +22,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// *
-//  * a filter that executes once per request. AuthTokenFilter class that extends
-//  * OncePerRequestFilter and overrides doFilterInternal() method.
 
 public class AuthTokenFilter extends OncePerRequestFilter {
     @Autowired

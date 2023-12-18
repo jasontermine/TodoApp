@@ -12,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wiss.m223.model.User;
 
+/**
+ * Implementiert das UserDetails-Interface von Spring Security und stellt die Benutzerdetails bereit.
+ */
 public class UserDetailsImpl implements UserDetails {
     private static final long serialVersionUID = 1L;
     private Long id;
@@ -30,6 +33,11 @@ public class UserDetailsImpl implements UserDetails {
         this.authorities = authorities;
     }
 
+    /**
+     * Erstellt ein UserDetailsImpl-Objekt aus einem User-Objekt.
+     * @param user Das User-Objekt, aus dem die Benutzerdetails erstellt werden sollen.
+     * @return Das UserDetailsImpl-Objekt mit den Benutzerdetails.
+     */
     public static UserDetailsImpl build(User user) {
         List<GrantedAuthority> authorities = user.getRoles().stream()
                 .map(role -> new SimpleGrantedAuthority(role.getName().toString()))
