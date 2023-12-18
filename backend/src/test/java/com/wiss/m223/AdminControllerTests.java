@@ -16,12 +16,18 @@ import com.wiss.m223.model.Todo;
 import com.wiss.m223.model.Status.EStatus;
 import com.wiss.m223.repository.TodoRepository;
 
+/**
+ * Diese Klasse enthält Tests für den AdminController.
+ */
 @SpringBootTest
 public class AdminControllerTests {
 
     @Mock
     private TodoRepository todoRepository;
 
+    /**
+     * Testet die Methode getTodo.
+     */
     @Test
     void testGetTodo() {
 
@@ -39,6 +45,9 @@ public class AdminControllerTests {
         assertEquals(2, resultTodos.size(), "Erwartete Listengrösse: 2");
     }
 
+    /**
+     * Testet den Konstruktor der Klasse Todo.
+     */
     @Test
     void testTodoContructor() {
         // Arrange
