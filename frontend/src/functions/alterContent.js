@@ -5,21 +5,16 @@ const client = axios.create({
 });
 
 export async function deleteContent(id) {
-  let data = [];
 
   const token = JSON.parse(localStorage.getItem("user")).accessToken;
 
   await client
-    .post(`/admin/todos/delete/${id}`, {
+    .delete(`/admin/todos/delete/${id}`, {
       headers: { Authorization: `Bearer ${token}`, mode: "cors" },
-    })
-    .then((response) => {
-      data = response.data;
     })
     .catch((error) => {
       console.log("Ein Fehler ist aufgetreten: " + error);
     });
-  return data;
 }
 
 export async function createContent(name, message, id) {
