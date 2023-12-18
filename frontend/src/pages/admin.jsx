@@ -28,7 +28,7 @@ import { useState } from "react";
 export default function Admin() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [id, setStatusId] = useState(1);
+  const [id, setStatusId] = useState(0);
 
   const navigate = useNavigate();
 
@@ -52,9 +52,6 @@ export default function Admin() {
       .then(() => {
         // Erfolg
         navigate("/private");
-      })
-      .catch((error) => {
-        console.log(error.response.data.message);
       });
   };
 
@@ -135,20 +132,29 @@ export default function Admin() {
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>Modal title2</MDBModalTitle>
-              <MDBBtn
-                className="btn-close"
-                color="none"
-                onClick={toggleOpen2}
-              ></MDBBtn>
+              <MDBModalTitle>Todo Löschen</MDBModalTitle>
             </MDBModalHeader>
-            <MDBModalBody>...</MDBModalBody>
-
+            <MDBModalBody>
+              <MDBRow
+                tag="form"
+                className="form-control form-control-lg"
+                noValidate
+                onSubmit={handleSubmitDelete}
+              >
+                <MDBInput
+                  label="Id"
+                  className="form-control form-control-lg"
+                  onChange={onChangeStatusId}
+                  value={id}
+                  required
+                />
+              </MDBRow>
+            </MDBModalBody>
             <MDBModalFooter>
-              <MDBBtn color="secondary" onClick={toggleOpen2}>
+              <MDBBtn color="secondary" onClick={toggleOpen}>
                 Close
               </MDBBtn>
-              <MDBBtn>Save changes</MDBBtn>
+              <MDBBtn onClick={handleSubmitDelete}>Löschen</MDBBtn>
             </MDBModalFooter>
           </MDBModalContent>
         </MDBModalDialog>
