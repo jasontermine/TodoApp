@@ -23,8 +23,8 @@ public class WebSecurityConfig {
     private UserDetailsServiceImpl userDetailsService;
     @Autowired
     private AuthenticationEntryPoint unauthorizedHandler;
-    private final static String[] EVERYONE = { "/public", "/api/auth/**", "/admin/**" };
-    private final static String[] SECURE = { "/user", "/admin" };
+    private final static String[] EVERYONE = { "/public", "/api/auth/**" };
+    private final static String[] SECURE = { "/private/todo", "/admin/**" };
     private final static String[] ROLES = { "ROLE_USER", "ROLE_ADMIN" };
 
     @Bean
