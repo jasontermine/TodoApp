@@ -17,7 +17,7 @@ export async function getPrivateContent() {
 
     const token = JSON.parse(localStorage.getItem("user")).accessToken;
 
-  await client.get("/private", { headers: {"Authorization": `Bearer ${token}`, mode: "cors" } }).then((response) => {
+  await client.get("/private/todos", { headers: {"Authorization": `Bearer ${token}`, mode: "cors" } }).then((response) => {
     data = response.data;
   });
   return data;
