@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wiss.m223.model.Todo;
 import com.wiss.m223.repository.TodoRepository;
 
+/**
+ * Der PrivateController ist für die Verwaltung der privaten Endpunkte zuständig.
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/private")
@@ -21,10 +24,21 @@ public class PrivateController {
 	@Autowired
 	TodoRepository todoRepository;
 
+	/**
+	 * Gibt eine Begrüssungsnachricht für den privaten Bereich zurück.
+	 * 
+	 * @return die Begrüssungsnachricht
+	 */
 	@GetMapping("")
 	public ResponseEntity<String> greeting() {
 		return new ResponseEntity<>("Hallo, du bist im Private", HttpStatus.OK);
 	}
+	
+	/**
+	 * Gibt eine Liste aller Todos zurück.
+	 * 
+	 * @return die Liste der Todos
+	 */
 	@GetMapping("/todos")
 	public ResponseEntity<List<Todo>> getTodo() {
 		List<Todo> todos = todoRepository.findAll();

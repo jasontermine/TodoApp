@@ -30,6 +30,9 @@ import com.wiss.m223.security.UserDetailsImpl;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
+/**
+ * Der AuthController ist verantwortlich für die Authentifizierung und Autorisierung von Benutzern.
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
@@ -45,6 +48,12 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
+    /**
+     * Authentifiziert den Benutzer anhand der bereitgestellten Anmeldeinformationen.
+     * 
+     * @param loginRequest Die Anmeldeinformationen des Benutzers.
+     * @return Eine ResponseEntity mit dem generierten JWT-Token und den Benutzerdetails.
+     */
     @Transactional
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -64,6 +73,12 @@ public class AuthController {
                 roles));
     }
 
+    /**
+     * Registriert einen neuen Benutzer mit den bereitgestellten Registrierungsinformationen.
+     * 
+     * @param signUpRequest Die Registrierungsinformationen des Benutzers.
+     * @return Eine ResponseEntity mit einer Erfolgsmeldung, wenn die Registrierung erfolgreich war.
+     */
     @Transactional
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
