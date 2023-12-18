@@ -2,6 +2,9 @@ package com.wiss.m223.helper;
 
 import java.util.List;
 
+/**
+ * Diese Klasse repräsentiert eine JWT-Antwort, die vom Server an den Client gesendet wird.
+ */
 public class JwtResponse {
     private String token;
     private String type = "Bearer";

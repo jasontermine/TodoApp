@@ -14,6 +14,9 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
+/**
+ * Diese Klasse repräsentiert einen Benutzer in der Anwendung.
+ */
 @Entity
 @Table(name = "User")
 public class User {
