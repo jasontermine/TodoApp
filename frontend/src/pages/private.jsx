@@ -13,7 +13,7 @@ export default function Private() {
 
   return (
     <>  
-    <div className="position-absolute" style={{marginTop:"-25rem", marginLeft: "34rem"}}>
+    <div className="position-absolute" style={{marginTop:"-22rem", marginLeft: "34rem"}}>
       <h1 className="mb-4 ms-5">Hier sind alle Todos:</h1>
       <ul>
         {data.map((item) => (

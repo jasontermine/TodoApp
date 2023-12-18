@@ -40,10 +40,11 @@ export default function Login() {
 
   return (
     <>
-    <h1 style={{ top: "0", position: "absolute", marginLeft: "-6rem"}} className="start-50">Login</h1>
+    <h1 style={{ top: "0", position: "absolute", marginLeft: "-6rem",  marginTop: "7rem"}} className="start-50">Login</h1>
       <MDBValidation
         onSubmit={handleSubmit}
         className="w-75 h-75 position-absolute top-50 start-50 translate-middle"
+        style={{ marginTop: "7rem"}}
       >
         <div style={{ marginLeft: "12rem" }}>
           <MDBValidationItem className="col-md-10 mb-4">
