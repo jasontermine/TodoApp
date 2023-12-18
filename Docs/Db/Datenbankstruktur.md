@@ -11,16 +11,16 @@
     <td>long AUTO_INCREMENT PK</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td>username</td>
     <td>VARCHAR(100)</td>
+  </tr>
+  <tr>
+    <td>email</td>
+    <td>VARCHAR (100)</td>
   </tr>
   <tr>
     <td>password</td>
     <td>VARCHAR (100)</td>
-  </tr>
-  <tr>
-    <td>user_role</td>
-    <td>Role FK </td>
   </tr>
 </table> 
 
