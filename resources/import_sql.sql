@@ -1,17 +1,14 @@
-CREATE DATABASE IF NOT EXISTS m223_demo;
+CREATE DATABASE IF NOT EXISTS todo;
 
-USE m223_demo;
+USE todo;
 
-CREATE USER 'm223_demo'@'%' IDENTIFIED BY 'globi.1234';
+CREATE USER 'todo_user'@'%' IDENTIFIED BY 'todo_user';
 
-GRANT ALL PRIVILEGES
-    ON m223_demo.*
-    TO 'm223_demo'@'%';
+GRANT ALL PRIVILEGES ON todo.* TO 'todo_user'@'%';
 
-CREATE TABLE IF NOT EXISTS Status (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name ENUM('STATUS_OFFEN', 'STATUS_IN_BEARBEITUNG', 'STATUS_ABGESCHLOSSEN') NOT NULL
-);
+-- Füge diese Daten in die Datenbank ein NACHDEM du die Applikation zum ersten mal gestartet hast
+INSERT INTO role (id, name) VALUES (1, 'ROLE_USER');
+INSERT INTO role (id, name) VALUES (2, 'ROLE_ADMIN');
 
 INSERT INTO Status (id, name) VALUES (1, 'STATUS_OFFEN');
 INSERT INTO Status (id, name) VALUES (2, 'STATUS_IN_BEARBEITUNG');
