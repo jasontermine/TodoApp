@@ -175,7 +175,7 @@ npm test
 #### Vorhandene Tests
 - state.test.js 
 
-##### auth.service.test.js
+##### state.test.js
 Dieser Test überprüft, ob die States funktional sind.
 
 ### Backend
