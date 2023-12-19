@@ -149,7 +149,7 @@ Die verschiedenen Seiten der Webanwendung sind in der folgenden Tabelle aufgelis
 | /private | Liste aller Todo's | Ja |
 | /admin | Zwei buttons zur Auswahl, ob man ein Todo erstellen möchte oder eins löschen | Ja |
 
-Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und absenden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt. Die Seite "/private" listet die Todos nur auf.
+Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen zwei verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und abgesendet werden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt und die erstellten Todo's werden angezeigt. Die Seite "/private" listet nur die Todo's auf.
 
 ### Backend
 
