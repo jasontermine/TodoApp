@@ -23,16 +23,6 @@ public class PrivateController {
 	
 	@Autowired
 	TodoRepository todoRepository;
-
-	/**
-	 * Gibt eine Begrüssungsnachricht für den privaten Bereich zurück.
-	 * 
-	 * @return die Begrüssungsnachricht
-	 */
-	@GetMapping("")
-	public ResponseEntity<String> greeting() {
-		return new ResponseEntity<>("Hallo, du bist im Private", HttpStatus.OK);
-	}
 	
 	/**
 	 * Gibt eine Liste aller Todos zurück.

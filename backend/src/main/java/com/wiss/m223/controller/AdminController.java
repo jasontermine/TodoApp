@@ -26,7 +26,7 @@ import com.wiss.m223.repository.TodoRepository;
 public class AdminController {
 
 	@Autowired
-	private TodoRepository todoRepository;
+	TodoRepository todoRepository;
 	
 	/**
 	 * Gibt alle Todos zurück.
