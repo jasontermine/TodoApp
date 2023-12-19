@@ -31,7 +31,6 @@ Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berec
     - [MySQL](#mysql-1)
     - [Frontend (React)](#frontend-react-1)
     - [Backend (Spring Boot)](#backend-spring-boot-1)
-  - [Fazit](#fazit)
 
 
 ## Installationen
