@@ -30,6 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
+    loader: private_loader,
     element: <Layout><Admin /></Layout>
   },
 ]);
