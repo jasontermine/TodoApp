@@ -1,11 +1,28 @@
+### Fehlt noch:
+- FE-Code kommentieren
+- 1 Frontend Test
+- Hilfestellungen
+- Allgemeine Doku erweitern
+
 # Todo App
 
-## Description
+## Informieren
 Multiuser TODO App wobei ein Admin / CEOs TODOs erstellen können und Ihren Employees zuweisen kann
 
-## User Roles
-- CEO / Admin  
-- Employee
+## Planen
+Der Admin kann Todos erstellen können und normale Benutzer ("Users / Employees") können die Todos einsehen können
+
+## Entscheiden
+Der Admin soll Todos erstellen können und normale Benutzer ("Users / Employees") sollen die Todos einsehen können
+
+## Realisation
+Das Beispielprojekt von Sven wurde übernommen und die angemessenen Anpassungen / Implementierung für die Anforderungen werden folgen.
+
+## Kontrollieren
+Das fertige Projekt wird auf die Anforderungen und Akzeptanzkriterien kontrollieren und allfällige Änderungen oder Anpassungen werden vorgenommen
+
+## Auswerten
+Das fertige Projekt entspricht den Anforderungen und erfüllt die Akzeptanzkriterien
 
 # Installationsanleitung 
 
