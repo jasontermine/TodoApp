@@ -1,7 +1,7 @@
 # Todo App
 
 ## Beschreibung
-Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berechtigungen, Todo's "Aufgaben" zu erstellen. Die Todo's haben eine Id, eine Message und einen Status, welche man setzen kann, je nach Standpunkt des Projekts.
+Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berechtigungen, Todo's "Aufgaben" zu erstellen. Die Todo's haben eine Id, eine Message und einen Status, welche man setzen kann, je nach Standpunkt des Todo's.
 
 ## Inhaltsverzeichnis
 - [Todo App](#todo-app)
@@ -116,7 +116,7 @@ spring.datasource.password=password
 | Admin / CEO             | Einloggen                     | Um seine TODOs zu verwalten     | Admin kann sich einloggen                |
 | Mitarbeiter / Employee  | Einloggen                     | Um seine/Ihre TODOs einzusehen  | Employee kann sich einloggen             |
 | Admin / CEO             | TODOs erstellen               | Um Arbeiten zu delegieren       | Admin kann TODOS erstellen               |
-| Admin / CEO             | Stati der TODO setzen         | Um die Arbetien zu verfolgen    | Admin sieht ein, welche TODOs offen sind |       
+| Admin / CEO             | Stati der TODO setzen         | Um die Arbeiten zu verfolgen    | Admin sieht ein, welche TODOs offen sind |       
 
 
 ## Dokumentation
@@ -145,10 +145,11 @@ Die verschiedenen Seiten der Webanwendung sind in der folgenden Tabelle aufgelis
 | URL | Beschreibung | Authentifizierung |
 | --- | --- | --- |
 | / | Login Seite | Nein |
+| /public | Easter Egg ;) | Nein |
 | /private | Liste aller Todo's | Ja |
 | /admin | Zwei buttons zur Auswahl, ob man ein Todo erstellen möchte oder eins löschen | Ja |
 
-Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und absenden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt. Die Seite "/private" listet die Todos nur auf.
+Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen zwei verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und abgesendet werden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt und die erstellten Todo's werden angezeigt. Die Seite "/private" listet nur die Todo's auf.
 
 ### Backend
 
@@ -174,7 +175,7 @@ npm test
 #### Vorhandene Tests
 - state.test.js 
 
-##### auth.service.test.js
+##### state.test.js
 Dieser Test überprüft, ob die States funktional sind.
 
 ### Backend
@@ -193,7 +194,7 @@ Diese Schicht enthält zwei Tests.
 Genaurere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
 
 ## Sicherheit
-Sie Sicherheit der Webanwendung wird mit folgenden Technologien gewährleistet.
+Die Sicherheit der Webanwendung wird mit folgenden Technologien gewährleistet.
 
 ### Spring Security
 Spring Security ist ein Framework, das dazu dient, die Sicherheit einer Webanwendung sicherzustellen. Es bietet verschiedene Mittel, um dies zu erreichen. In diesem Projekt wird Spring Security verwendet, um sowohl die Authentifizierung als auch die Autorisierung zu handhaben.
@@ -215,16 +216,16 @@ Da die Datenbank durch Spring Boot generiert wurde, kam zur Entwicklung nur [MyS
 ### Frontend (React)
 Da ich in meinem Betrieb bereits Erfahrung habe mit Vue.js, war das entwickeln vom Frontend mit React nicht so ein Problem. Vorallem die handhabung mit den REST, States und die Logik hinter der Komponentenbaserte Webentwicklung. Trotzdem benötigte ich für gewisse sachen Hilfe von der [React Dokumentation](https://reactjs.org/docs/getting-started.html).
 
-Aufgrund der sehr begrenzter Zeit für dieses Projekt, habe ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) zurückgegriffen.
+Aufgrund der sehr begrenzter Zeit für dieses Projekt, musste ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) nutzen.
 
-Hilfe wurde von folgenden Mitschülern und Dozenten erhalten:
+Hilfe wurde von folgenden Mitschülern erhalten:
 - Christoph Knuchel
 
 Hilfe wurde von folgenden Lehrern erhalten:
 - Sven Schirmer
 
 ### Backend (Spring Boot)
-Da ich bereits Erfahrungen gesammelt habe im Modul 320 (Objektorientiert Programmieren) und Modul 295 (Backend für Applikationen realisieren), welche auch Springboot und Maven enthielten, war das realisieren des Backends für dieses Projekt nicht so Kompliziert. Jedoch habe ich von der [Spring Boot Dokumentation](https://spring.io/projects/spring-boot) hilfe bezogen.
+Da ich bereits Erfahrungen gesammelt habe im Modul 320 (Objektorientiert Programmieren) und Modul 295 (Backend für Applikationen realisieren), welche auch Springboot und Maven enthielten, war das realisieren des Backends für dieses Projekt nicht so Kompliziert. Jedoch habe ich von der [Spring Boot Dokumentation](https://spring.io/projects/spring-boot) etwas hilfe benötigt.
 
 Aufgrund der sehr begrenzter Zeit für dieses Projekt, habe ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) zurückgegriffen.
 
