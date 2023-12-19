@@ -1,6 +1,6 @@
 ### Fehlt noch:
-- Code kommentieren
-- Frontend Test
+- FE-Code kommentieren
+- 1 Frontend Test
 - Hilfestellungen
 - Allgemeine Doku erweitern
 
