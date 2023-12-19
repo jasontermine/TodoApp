@@ -6,19 +6,18 @@ export async function loader() {
   return { data };
 }
 
-// Gibt eine Bildschrim Komponente zurück
+/**
+ * Beinhaltet einen Easter Egg ;)
+ * @returns {JSX.Element} Die öffentliche Seite.
+ */
 export default function Public() {
   const { data } = useLoaderData();
 
   return (
     <>
       <h1>Public</h1>
-      <p>Hier sind die Serverdaten:</p>
-      <ol>
-        {data.map((item) => (
-          <li key={item}> {item} </li>
-        ))}
-      </ol>
+      <h2>Hier sind die Serverdaten:</h2>
+      <h3>{ data }</h3>
     </>
   );
 }

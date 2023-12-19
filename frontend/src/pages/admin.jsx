@@ -1,10 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { createContent, deleteContent } from "../functions/alterContent";
 import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardText,
-  MDBCardTitle,
   MDBBtn,
   MDBModal,
   MDBModalDialog,
@@ -18,14 +14,12 @@ import {
 } from "mdb-react-ui-kit";
 import { useState } from "react";
 
-/* export async function loader() {
-  const createContent = await createContent();
-  const deleteContent = await deleteContent();
-  return { data };
-} */
-
-// Gibt eine Bildschrim Komponente zurück
+/**
+ * Komponente für die Admin-Seite.
+ * Diese Komponente ermöglicht das Erstellen und Löschen von Todos.
+ */
 export default function Admin() {
+  // Zustandsvariablen
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [id, setStatusId] = useState();
@@ -35,6 +29,10 @@ export default function Admin() {
   const [basicModal, setBasicModal] = useState(false);
   const [basicModal2, setBasicModal2] = useState(false);
 
+  /**
+   * Funktion zum Erstellen eines Todos.
+   * @param {Event} e - Das Formular-Ereignis.
+   */
   const handleSubmitCreate = (e) => {
     e.preventDefault(); // verhindert das standardmässige Absenden des Formulars
 
@@ -45,6 +43,10 @@ export default function Admin() {
       });
   };
 
+  /**
+   * Funktion zum Löschen eines Todos.
+   * @param {Event} e - Das Formular-Ereignis.
+   */
   const handleSubmitDelete = (e) => {
     e.preventDefault(); // verhindert das standardmässige Absenden des Formulars
 
@@ -55,31 +57,46 @@ export default function Admin() {
       });
   };
 
-  // for name
+  /**
+   * Funktion zum Aktualisieren des Namens.
+   * @param {Event} e - Das Änderungsereignis.
+   */
   const onChangeName = (e) => {
     setName(e.target.value);
   };
 
-  // for message
+  /**
+   * Funktion zum Aktualisieren der Nachricht.
+   * @param {Event} e - Das Änderungsereignis.
+   */
   const onChangeMessage = (e) => {
     setMessage(e.target.value);
   };
 
-  // for status
+  /**
+   * Funktion zum Aktualisieren der Status-ID.
+   * @param {Event} e - Das Änderungsereignis.
+   */
   const onChangeStatusId = (e) => {
     setStatusId(e.target.value);
   };
 
+  /**
+   * Funktion zum Öffnen/Schließen des Modals zum Erstellen eines Todos.
+   */
   const toggleOpen = () => setBasicModal(!basicModal);
+
+  /**
+   * Funktion zum Öffnen/Schließen des Modals zum Löschen eines Todos.
+   */
   const toggleOpen2 = () => setBasicModal2(!basicModal2);
-  // const { data } = useLoaderData();
 
   return (
     <>
-    <div className="position-absolute start-50 top-50" style={{ marginLeft: "-12rem", marginTop: "-13rem"}}>
-      <MDBBtn onClick={toggleOpen}>Todo Erstellen</MDBBtn>
-      <MDBBtn className="ms-3" onClick={toggleOpen2}>Todo löschen</MDBBtn>
-    </div>
+      <div className="position-absolute start-50 top-50" style={{ marginLeft: "-12rem", marginTop: "-13rem"}}>
+        <MDBBtn onClick={toggleOpen}>Todo Erstellen</MDBBtn>
+        <MDBBtn className="ms-3" onClick={toggleOpen2}>Todo löschen</MDBBtn>
+      </div>
 
       {/* Modal 1 For POST */}
       <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex="-1">

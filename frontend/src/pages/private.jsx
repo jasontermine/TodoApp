@@ -2,12 +2,19 @@ import { useLoaderData } from "react-router-dom";
 import { getPrivateContent } from "../functions/getContent";
 import { MDBCard, MDBCardBody, MDBCardText, MDBCardTitle } from "mdb-react-ui-kit";
 
+/**
+ * Lädt den privaten Inhalt und gibt ihn als Datenobjekt zurück.
+ * @returns {Promise<{ data: Array }>} Das Datenobjekt mit dem privaten Inhalt.
+ */
 export async function loader() {
   const data = await getPrivateContent();
   return { data };
 }
 
-// Gibt eine Bildschrim Komponente zurück
+/**
+ * Komponente für die private Seite.
+ * @returns {JSX.Element} Die private Seite.
+ */
 export default function Private() {
   const { data } = useLoaderData();
 

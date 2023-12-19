@@ -11,6 +11,11 @@ import {
   MDBIcon
 } from 'mdb-react-ui-kit';
 
+/**
+ * Komponente für die Navigationsleiste der Anwendung.
+ * 
+ * @returns {JSX.Element} Die JSX-Elemente für die Navigationsleiste.
+ */
 export default function App() {
   const [openNav, setOpenNav] = useState(false);
 

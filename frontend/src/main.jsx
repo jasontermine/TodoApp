@@ -13,6 +13,10 @@ import {
 import "./index.css";
 import Layout from "./components/Layout";
 
+/**
+ * Hauptdatei der Anwendung.
+ * Hier werden die Routen definiert und die Anwendung gerendert.
+ */
 const router = createBrowserRouter([
   {
     path: "/",

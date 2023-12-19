@@ -10,11 +10,19 @@ import {
 } from "mdb-react-ui-kit";
 import AuthService from "../functions/auth.service";
 
+/**
+ * Komponente für die Login-Seite.
+ * Diese Komponente ermöglicht das einloggen.
+ */
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  /**
+   * Funktion zum Anmelden.
+   * @param {Event} e - Das Formular-Ereignis.
+   */
   const handleSubmit = (e) => {
     e.preventDefault(); // verhindert das standardmässige Absenden des Formulars
 
@@ -28,12 +36,18 @@ export default function Login() {
       });
   };
 
-  // for Username
+  /**
+   * Funktion zum Aktualisieren des Usernames.
+   * @param {Event} e - Das Änderungsereignis.
+   */
   const onChangeUsername = (e) => {
     setUsername(e.target.value);
   };
 
-  // for password
+  /**
+   * Funktion zum Aktualisieren des Passworts.
+   * @param {Event} e - Das Änderungsereignis.
+   */
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
@@ -82,30 +96,4 @@ export default function Login() {
       </MDBValidation>
     </>
   );
-
-  /* return (
-    <form onSubmit={handleSubmit} method="post">
-      <label>
-        Username:
-        <input
-          value={username}
-          onChange={onChangeUsername}
-          name="username"
-          type="text"
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          value={password}
-          onChange={onChangePassword}
-          name="password"
-          type="password"
-        />
-      </label>
-      <br />
-      <button type="submit">Login</button>
-    </form>
-  ); */
 }
