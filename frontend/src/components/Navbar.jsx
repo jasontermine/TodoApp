@@ -22,7 +22,7 @@ export default function App() {
   return (
     <MDBNavbar className='position-absolute w-100' style={{top: "0"}} expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='/'>Navbar</MDBNavbarBrand>
+        <MDBNavbarBrand href='/'>TodoApp</MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
           aria-expanded='false'
