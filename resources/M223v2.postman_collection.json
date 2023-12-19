@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "ec72dc98-3268-4b9e-8a0c-c3f411200eec",
+		"name": "M223",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31696899"
+	},
+	"item": [
+		{
+			"name": "Admin/todos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2QiLCJpYXQiOjE3MDI5MDI1MDMsImV4cCI6MTcwMjkwNjEwM30.WWm_qtniRi-FwPlvdF_1DbdS-n_DKb3pbE31PE8r1-E3PafZLXUQ0nXx16mPeoZohvxaGUsnq5lhkD2mztg2-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin/todos/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2QiLCJpYXQiOjE3MDI5MDI1MDMsImV4cCI6MTcwMjkwNjEwM30.WWm_qtniRi-FwPlvdF_1DbdS-n_DKb3pbE31PE8r1-E3PafZLXUQ0nXx16mPeoZohvxaGUsnq5lhkD2mztg2-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"React is trash\",\r\n    \"message\": \"Absolute trash framework\",\r\n    \"status\": {\r\n        \"id\": 3\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/todos/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"todos",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin/todos/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2QiLCJpYXQiOjE3MDI5MDY1NDIsImV4cCI6MTcwMjkxMDE0Mn0.-C_3fAZK_-nXyj_YOxaaz1f_Q9mrQx5aK73jLJb0UZUN46cMeOnC3oxjxELFftCfZ8Gszg3F8NAAp46IXXhTSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/todos/delete/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"todos",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"asd\",\r\n    \"password\": \"top1234\",\r\n    \"email\":  \"asd@example.com\",\r\n    \"roles\":  []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"asd\",\r\n    \"password\": \"top1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Public",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "private/todos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2QiLCJpYXQiOjE3MDI5MDI1MDMsImV4cCI6MTcwMjkwNjEwM30.WWm_qtniRi-FwPlvdF_1DbdS-n_DKb3pbE31PE8r1-E3PafZLXUQ0nXx16mPeoZohvxaGUsnq5lhkD2mztg2-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/private/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"private",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
