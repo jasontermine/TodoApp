@@ -194,7 +194,7 @@ Diese Schicht enthält zwei Tests.
 Genaurere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
 
 ## Sicherheit
-Sie Sicherheit der Webanwendung wird mit folgenden Technologien gewährleistet.
+Die Sicherheit der Webanwendung wird mit folgenden Technologien gewährleistet.
 
 ### Spring Security
 Spring Security ist ein Framework, das dazu dient, die Sicherheit einer Webanwendung sicherzustellen. Es bietet verschiedene Mittel, um dies zu erreichen. In diesem Projekt wird Spring Security verwendet, um sowohl die Authentifizierung als auch die Autorisierung zu handhaben.
