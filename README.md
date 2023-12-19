@@ -145,6 +145,7 @@ Die verschiedenen Seiten der Webanwendung sind in der folgenden Tabelle aufgelis
 | URL | Beschreibung | Authentifizierung |
 | --- | --- | --- |
 | / | Login Seite | Nein |
+| /public | Easter Egg ;) | Nein |
 | /private | Liste aller Todo's | Ja |
 | /admin | Zwei buttons zur Auswahl, ob man ein Todo erstellen möchte oder eins löschen | Ja |
 
