@@ -292,4 +292,4 @@ Hilfe wurde von folgenden Lehrern erhalten:
 - Dank der Hilfe des Mitschülers und des Donzenten, konnte das Projekt Erfolgreich abgeschlossen werden. 
 
 ## Zusammenfassung
-Die Todo-App wurde erfolgreich entwickelt und umfasst alle erforderlichen Funktionen. Die IPERKA-Methode half bei einer strukturierten Planung und Umsetzung des Projekts. Trotzdem gab es zu beginn schwierigkeiten, da die Erfahrung mit Java und React fehlte. Jedoch konnte ich micht durchlämpfen in dieser sehr begrenzter Zeit und konnte das Projekt abschliessen.
+Die Todo-App wurde erfolgreich entwickelt und umfasst alle erforderlichen Funktionen. Die IPERKA-Methode half bei einer strukturierten Planung und Umsetzung des Projekts. Trotzdem gab es zu beginn schwierigkeiten, da die Erfahrung mit Java und React fehlte. Jedoch konnte ich micht durchkämpfen in dieser sehr begrenzter Zeit und konnte das Projekt abschliessen.
