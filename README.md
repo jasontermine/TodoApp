@@ -1,40 +1,82 @@
 # Todo App
 
-## Beschreibung
+## Beschreibung Projekt
 Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berechtigungen, Todo's "Aufgaben" zu erstellen. Die Todo's haben eine Id, eine Message und einen Status, welche man setzen kann, je nach Standpunkt des Todo's.
 
 ## Inhaltsverzeichnis
 - [Todo App](#todo-app)
-  - [Beschreibung](#beschreibung)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Installationen](#installationen)
-    - [MySQL](#mysql)
-    - [Frontend (React)](#frontend-react)
-    - [Backend (Spring Boot)](#backend-spring-boot)
-  - [Verwendete Technologien](#verwendete-technologien)
-  - [Akzeptanzkriterien](#akzeptanzkriterien)
-  - [Dokumentation](#dokumentation)
-    - [Datenbank](#datenbank)
-    - [RBAC](#rbac)
-    - [REST API](#rest-api)
-    - [Frontend](#frontend-1)
-    - [Backend](#backend-1)
-  - [Tests](#tests)
-    - [Frontend](#frontend-2)
-    - [Backend](#backend-2)
-  - [Sicherheit](#sicherheit)
-    - [Spring Security](#spring-security)
-    - [JWT](#jwt)
-    - [BCrypt](#bcrypt)
-    - [CORS](#cors)
-  - [Hilfestellungen](#hilfestellungen)
-    - [MySQL](#mysql-1)
-    - [Frontend (React)](#frontend-react-1)
-    - [Backend (Spring Boot)](#backend-spring-boot-1)
+    - [Beschreibung Projekt](#beschreibung-projekt)
+    - [Informationsbeschaffung](#1-informationsbeschaffung)
+        - [Beschreibung](#beschreibung)
+        - [Verwendete Technologien](#verwendete-technologien)
+        - [Akzeptanzkriterien](#akzeptanzkriterien)
+    - [Planung](#2-planung)
+        - [Installationen](#installationen)
+            - [MySQL](#mysql)
+            - [Frontend (React)](#frontend-react)
+            - [Backend (Spring Boot)](#backend-spring-boot)
+        - [Verwendete Technologien](#verwendete-technologien-1)
+    - [Entscheiden](#3-entscheiden)
+        - [Beschreibung Datenbank](#beschreibung-datenbank)
+        - [ERD](#erd)
+        - [RBAC](#rbac-role-based-access-control)
+        - [REST API](#rest-api)
+        - [Frontend](#frontend)
+        - [Backend](#backend)
+    - [Realisierung](#4-realisierung)
+        - [Tests](#tests)
+            - [Frontend](#frontend-1)
+            - [Backend](#backend-1)
+        - [Vorhandene Tests](#vorhandene-tests-1)
+    - [Kontrolle](#5-kontrolle)
+        - [Sicherheit](#sicherheit)
+            - [Spring Security](#spring-security)
+            - [JWT](#jwt)
+            - [BCrypt](#bcrypt)
+            - [CORS](#cors)
+            - [Hilfestellungen](#hilfestellungen)
+            - [MySQL](#mysql-1)
+            - [Frontend (React)](#frontend-react-1)
+            - [Backend (Spring Boot)](#backend-spring-boot-1)
+    - [Auswerten](#6-auswerten)
+        - [Dokumentation](#dokumentation)
+        - [Tests](#tests-1)
+        - [Sicherheit](#sicherheit-1)
+        - [Hilfestellungen](#hilfestellungen-1)
+    - [Zusammenfassung](#zusammenfassung)
 
 
-## Installationen
+## 1. Informationsbeschaffung
 
+### Beschreibung
+- **Was:** Eine Todo-App für die Verwaltung von Aufgaben.
+- **Zweck:** Benutzern mit Berechtigungen ermöglichen, Todos zu erstellen und zu verwalten.
+- **Struktur:** Todos haben Id, Message und einen Status.
+
+### Verwendete Technologien
+- [React](https://reactjs.org/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [MySQL 8.0](https://www.mysql.com/)
+- [MDBootstrap](https://mdbootstrap.com/)
+- [JWT](https://jwt.io/)
+- [Maven](https://maven.apache.org/)
+- [NPM](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Postman](https://www.postman.com/)
+
+### Akzeptanzkriterien
+| Wer                     | Was                           |  Warum                          |    Akzeptanzkriterien                    |
+| ------------------------|-------------------------------|---------------------------------|------------------------------------------|
+| Admin / CEO             | Einloggen                     | Um seine TODOs zu verwalten     | Admin kann sich einloggen                |
+| Mitarbeiter / Employee  | Einloggen                     | Um seine/Ihre TODOs einzusehen  | Employee kann sich einloggen             |
+| Admin / CEO             | TODOs erstellen               | Um Arbeiten zu delegieren       | Admin kann TODOS erstellen               |
+| Admin / CEO             | Stati der TODO setzen         | Um die Arbeiten zu verfolgen    | Admin sieht ein, welche TODOs offen sind |       
+
+
+## 2. Planung
+
+### Installationen
 ### MySQL
 1. Installieren Sie [MySQL](https://dev.mysql.com/downloads/installer/)
 2. (in Windows) Starten Sie den MySQL Dienst, falls dieser noch nicht gestartet ist. <br/> (in Linux) Starten Sie den mysql-Daemon mit `sudo systemctl start mysql` oder `sudo systemctl start mysql.service`
@@ -97,39 +139,29 @@ spring.datasource.password=password
 ```
 7. Öffnen Sie [http://localhost:8080](http://localhost:8080) um die App im Browser zu sehen.
 
-## Verwendete Technologien
-- [React](https://reactjs.org/)
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [MySQL 8.0](https://www.mysql.com/)
-- [MDBootstrap](https://mdbootstrap.com/)
+### Verwendete Technologien
+- [Spring Security](https://spring.io/projects/spring-security)
 - [JWT](https://jwt.io/)
-- [Maven](https://maven.apache.org/)
-- [NPM](https://www.npmjs.com/)
-- [Git](https://git-scm.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Postman](https://www.postman.com/)
+- [BCrypt](https://en.wikipedia.org/wiki/Bcrypt)
+- [CORS](https://de.wikipedia.org/wiki/Cross-Origin_Resource_Sharing)
 
-## Akzeptanzkriterien
+## 3. Entscheiden
 
-| Wer                     | Was                           |  Warum                          |    Akzeptanzkriterien                    |
-| ------------------------|-------------------------------|---------------------------------|------------------------------------------|
-| Admin / CEO             | Einloggen                     | Um seine TODOs zu verwalten     | Admin kann sich einloggen                |
-| Mitarbeiter / Employee  | Einloggen                     | Um seine/Ihre TODOs einzusehen  | Employee kann sich einloggen             |
-| Admin / CEO             | TODOs erstellen               | Um Arbeiten zu delegieren       | Admin kann TODOS erstellen               |
-| Admin / CEO             | Stati der TODO setzen         | Um die Arbeiten zu verfolgen    | Admin sieht ein, welche TODOs offen sind |       
-
-
-## Dokumentation
-
-### Datenbank
+### Beschreibung Datenbank 
 Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer. Die Tabelle "role" enthält alle Rollen. Die Tabelle "todo" enthält alle Todo's. Die Tabelle "status" enthält alle Stati, in Relation zu den Todo's. Die Tabelle "user_role" enthält die Rollen, in Relation zu den Benutzern.
 
+### ERD 
+- ER-Diagramm für die Datenbankstruktur.<br/>
 ![Datenbank Diagramm](resources/ERD.png)
 
-### RBAC
+### RBAC (Role-Based Access Control) 
+- RBAC-Diagramm zur Visualisierung der Rollen und Berechtigungen.<br/>
 ![RBAC Diagram](resources/RBAC_diagram.png)
 
-### REST API
+### REST API 
+- Authentifizierung über /api/auth/signup und /api/auth/signin.
+- Endpoints für die Verwaltung von Todos (/admin/todos).
+- POST, GET und DELETE Methoden für Todos.<br/>
 | Methode | URL | Beschreibung | Authentifizierung | Parameter |
 | --- | --- | --- | --- | --- |
 | POST | /api/auth/signup | Registriert einen neuen Benutzer | Nein | username, email, password |
@@ -138,10 +170,10 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 | POST | /admin/todos/create | Erstellt ein neues Todo | Ja | (Optional => id : int) name : String, message : String, status : int |
 | DELETE | /admin/todos/delete/{id} | Löscht ein todo | Ja | id : int |
 
-### Frontend
 
-Die verschiedenen Seiten der Webanwendung sind in der folgenden Tabelle aufgelistet.
-
+### Frontend 
+- Login-Seite (/) und Liste aller Todos (/private).
+- Admin-Seite (/admin) mit Buttons zum Erstellen und Löschen von Todos.
 | URL | Beschreibung | Authentifizierung |
 | --- | --- | --- |
 | / | Login Seite | Nein |
@@ -151,10 +183,12 @@ Die verschiedenen Seiten der Webanwendung sind in der folgenden Tabelle aufgelis
 
 Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen zwei verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und abgesendet werden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt und die erstellten Todo's werden angezeigt. Die Seite "/private" listet nur die Todo's auf.
 
-### Backend
-
-Das Backend ist in 5 Schichten aufgeteilt. Die Schichten sind in der folgenden Tabelle aufgelistet.
-
+### Backend 
+- Schichten: controller, helper, model, repository, security.
+- Spring Security für Authentifizierung und Autorisierung.
+- Verwendung von JWT für sichere Authentifizierung.
+- BCrypt für sichere Passwortverschlüsselung.
+- CORS für sichere Kommunikation zwischen Frontend und Backend.
 | Schicht | Beschreibung |
 | --- | --- |
 | controller | REST Controller |
@@ -163,9 +197,11 @@ Das Backend ist in 5 Schichten aufgeteilt. Die Schichten sind in der folgenden T
 | repository | Spring Data Repositories |
 | security | Spring Security |
 
+## 4. Realisierung
+
 ## Tests
 
-### Frontend
+### Frontend 
 Die Tests sind im Ordner "TodoApp/frontend/src/\__tests\_\_" zu finden. Die Tests sind mit dem Framework [Vitest](https://vitest.dev/) geschrieben. Die Tests können wie folgt ausgeführt werden.
 ```bash
 cd TodoApp/frontend
@@ -175,10 +211,13 @@ npm test
 #### Vorhandene Tests
 - state.test.js 
 
-##### state.test.js
+#### state.test.js
 Dieser Test überprüft, ob die States funktional sind.
 
-### Backend
+
+### Backend 
+- JUnit und Mockito.
+- AdminController-Tests.
 Die Tests sind im Ordner "backend/src/test/java/com/wiss/m223" zu finden.
 Die Tests sind mit dem Framework [JUnit](https://junit.org/junit5/) und [Mockito](https://site.mockito.org/) geschrieben. Die Tests können wie folgt ausgeführt werden.
 ```bash
@@ -193,7 +232,9 @@ Für Die folgenden Schichten, wurden Tests geschrieben:
 Diese Schicht enthält zwei Tests.
 Genaurere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
 
-## Sicherheit
+## 5. Kontrolle
+
+### Sicherheit
 Die Sicherheit der Webanwendung wird mit folgenden Technologien gewährleistet.
 
 ### Spring Security
@@ -208,7 +249,7 @@ In diesem Projekt wird der BCrypt-Algorithmus verwendet, um die Passwörter der 
 ### CORS
 In diesem Projekt ermöglicht der CORS-Mechanismus die nahtlose Kommunikation zwischen Frontend und Backend, indem er der Webanwendung erlaubt, sicher auf Ressourcen von einem anderen Server zuzugreifen.
 
-## Hilfestellungen
+### Hilfestellungen
 
 ### MySQL
 Da die Datenbank durch Spring Boot generiert wurde, kam zur Entwicklung nur [MySQL](https://www.mysql.com/) zum Einsatz.
@@ -234,3 +275,21 @@ Hilfe wurde von folgenden Mitschülern erhalten (Gott sei Dank):
 
 Hilfe wurde von folgenden Lehrern erhalten:
 - Sven Schirmer
+
+## 6. Auswerten
+
+### Dokumentation
+- Beinhlatet klare Erklärungen zu Datenbank, Frontend, Backend, RBAC und REST API.
+
+### Tests
+- Erfolgreiche Frontend- und Backend-Tests.
+- Frontend- sowie Backend-Tests sind erfolgreich und testen wichtige Funktionen. 
+
+### Sicherheit
+- Erfolgreiche Anwendung von Spring Security, JWT, BCrypt und CORS.
+
+### Hilfestellungen
+- Dank der Hilfe des Mitschülers und des Donzenten, konnte das Projekt Erfolgreich abgeschlossen werden. 
+
+## Zusammenfassung
+Die Todo-App wurde erfolgreich entwickelt und umfasst alle erforderlichen Funktionen. Die IPERKA-Methode half bei einer strukturierten Planung und Umsetzung des Projekts. Trotzdem gab es zu beginn schwierigkeiten, da die Erfahrung mit Java und React fehlte. Jedoch konnte ich micht durchlämpfen in dieser sehr begrenzter Zeit und konnte das Projekt abschliessen.
