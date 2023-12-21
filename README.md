@@ -94,7 +94,7 @@ CREATE DATABASE todo;
 GRANT ALL PRIVILEGES ON todo.* TO 'username'@'%';
 ```
 6. Starten Sie das Backend einmal, damit alle Tabellen erstellt werden. (Voraussetzung [Backend](#backend-spring-boot))
-7. Anschliessend importieren Sie das SQL script von "TodoApp/resoures/import_sql.sql" in MySQL
+7. Anschliessend importieren Sie das SQL script von "TodoApp/resources/import_sql.sql" in MySQL
 ```
 SOURCE TodoApp/resources/import_sql.sql;
 ```
