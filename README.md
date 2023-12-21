@@ -234,7 +234,7 @@ Für Die folgenden Schichten, wurden Tests geschrieben:
 - UserDetailsServiceImpl
 
 Diese Schicht enthält fünf Tests.
-Genaurere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
+Genauere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
 
 ## 5. Kontrolle
 
