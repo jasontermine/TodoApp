@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { getPrivateContent } from "../functions/getContent";
-import { MDBCard, MDBCardBody, MDBCardText, MDBCardTitle } from "mdb-react-ui-kit";
+import { deleteContent } from "../functions/alterContent";
+import { MDBCard, MDBCardBody, MDBCardText, MDBCardTitle, MDBIcon } from "mdb-react-ui-kit";
 
 /**
  * Lädt den privaten Inhalt und gibt ihn als Datenobjekt zurück.
@@ -26,6 +27,11 @@ export default function Private() {
         {data.map((item) => (
           <MDBCard key={item.id} className="mb-5 shadow-5-strong">
           <MDBCardBody>
+            {
+              JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? <div className="float-end" style={{cursor: "pointer"}} onClick={() => deleteContent(item.id).then(() => {window.location.reload()}) }>
+              <MDBIcon  color="danger" fas icon="trash" />
+            </div> : null
+            }
             <MDBCardTitle>{item.name} - Issue #{item.id}</MDBCardTitle>
             <MDBCardText>
               <strong>Nachricht: </strong>{ item.message }<br/>
