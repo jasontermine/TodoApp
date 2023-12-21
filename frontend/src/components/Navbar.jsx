@@ -23,7 +23,7 @@ export default function App() {
   return (
     <MDBNavbar className='position-absolute w-100' style={{top: "0"}} expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='/'>TodoApp</MDBNavbarBrand>
+        <MDBNavbarBrand >TodoApp</MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
           aria-expanded='false'
@@ -40,18 +40,28 @@ export default function App() {
               <MDBNavbarLink aria-current='page' href='/'>
                 Login
               </MDBNavbarLink>
-            </MDBNavbarItem> :
+              {/* Zeigt je nach rolle nur 'private' oder 'private' UND 'admin' */}
+            </MDBNavbarItem> : JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? <>
             <MDBNavbarItem>
               <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
                 Logout
               </MDBNavbarLink>
-            </MDBNavbarItem>}
+            </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href='/admin'>Admin</MDBNavbarLink>
             </MDBNavbarItem>
+            </>
+            : <>
+            <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
+            Logout
+          </MDBNavbarLink>
+            <MDBNavbarItem>
+            <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
+          </MDBNavbarItem>
+          </>}
             <MDBNavbarItem>
             </MDBNavbarItem>
           </MDBNavbarNav>
