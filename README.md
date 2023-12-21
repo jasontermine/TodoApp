@@ -162,6 +162,7 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 - Authentifizierung über /api/auth/signup und /api/auth/signin.
 - Endpoints für die Verwaltung von Todos (/admin/todos).
 - POST, GET und DELETE Methoden für Todos.<br/>
+
 | Methode | URL | Beschreibung | Authentifizierung | Parameter |
 | --- | --- | --- | --- | --- |
 | POST | /api/auth/signup | Registriert einen neuen Benutzer | Nein | username, email, password |
@@ -174,6 +175,8 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 ### Frontend 
 - Login-Seite (/) und Liste aller Todos (/private).
 - Admin-Seite (/admin) mit Buttons zum Erstellen und Löschen von Todos.
+- Private-Seite (/private) zum einsehen von den erstellten Todos.
+  
 | URL | Beschreibung | Authentifizierung |
 | --- | --- | --- |
 | / | Login Seite | Nein |
