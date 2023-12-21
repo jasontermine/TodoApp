@@ -188,10 +188,10 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 | --- | --- | --- |
 | / | Login Seite | Nein |
 | /public | Easter Egg ;) | Nein |
-| /private | Liste aller Todo's | Ja |
+| /private | Liste aller Todo's. Für Admin, besteht die möglichkeit, Todos direkt zu löschen, mittels Trash-Button  | Ja |
 | /admin | Zwei buttons zur Auswahl, ob man ein Todo erstellen möchte oder eins löschen | Ja |
 
-Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen zwei verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und abgesendet werden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt und die erstellten Todo's werden angezeigt. Die Seite "/private" listet nur die Todo's auf.
+Das User Interface des Frontends wurde aus zeitlichen Gründen, ganz simpel gestaltet und erfüllt somit den Zweck der Endpoints und des Projekts. Die Seite "/admin" verfügt über zwei Buttons "Todo erstellen" und "Todo löschen". Diese Buttons rufen zwei verschiedene "Modals" / Formulare auf.  Diese Formulare können nach Zweck ausgefüllt werden und abgesendet werden. Nach dem Erstellen oder Löschen eines Todo's, wird der Benutzer zur "/private" Seite geschickt und die erstellten Todo's werden angezeigt. Die Seite "/private" listet für nicht-Admins nur die Todo's auf und für Admins gibt es die Option, die Todos direkt zu löschen, mittels Trash-Button.
 
 ### Backend 
 - Schichten: controller, helper, model, repository, security.
