@@ -70,7 +70,7 @@ Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berec
 | ------------------------|-------------------------------|---------------------------------|------------------------------------------|
 | Admin / CEO             | Einloggen                     | Um seine TODOs zu verwalten     | Admin kann sich einloggen                |
 | Mitarbeiter / Employee  | Einloggen                     | Um seine/Ihre TODOs einzusehen  | Employee kann sich einloggen             |
-| Admin / CEO             | TODOs erstellen               | Um Arbeiten zu protokollieren       | Admin kann TODOS erstellen               |
+| Admin / CEO             | TODOs erstellen               | Um Arbeiten zu Protokollieren       | Admin kann TODOS erstellen               |
 | Admin / CEO             | Stati der TODO setzen         | Um die Arbeiten zu verfolgen    | Admin sieht ein, welche TODOs offen sind |       
 
 
@@ -93,35 +93,7 @@ CREATE DATABASE todo;
 ```sql
 GRANT ALL PRIVILEGES ON todo.* TO 'username'@'%';
 ```
-6. Starten Sie das Backend einmal, damit alle Tabellen erstellt werden. (Voraussezung [Backend](#backend-spring-boot))
-7. Anschliessend importieren Sie das SQL script von "TodoApp/resoures/import_sql.sql" in MySQL
-```
-SOURCE TodoApp/resources/import_sql.sql;
-```
-8. Starten Sie das Backend neu.
 
-### Backend (Spring Boot)
-1. Installieren Sie [Java](https://www.java.com/de/download/)
-2. Klonen Sie das Repository
-```bash
-git clone https://github.com/jasontermine/TodoApp.git
-```
-3. Navigieren Sie in den Ordner "TodoApp/backend"
-```bash
-cd TodoApp/backend
-```
-5. Fügen Sie Ihre MySQL Daten in die Datei "application.properties" ein
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/todo
-spring.datasource.username=username
-spring.datasource.password=password
-```
-
-6. Starten Sie das Backend
-```bash
-./mvnw spring-boot:run
-```
-7. Öffnen Sie [http://localhost:8080](http://localhost:8080) um die App im Browser zu sehen.
 
 ### Frontend (React)
 1. Installieren Sie [Node.js](https://nodejs.org/en/download/)
@@ -143,6 +115,29 @@ npm install
 npm run dev
 ```
 7. Öffnen Sie [http://localhost:5173](http://localhost:5173) um die App im Browser zu sehen.
+
+### Backend (Spring Boot)
+1. Installieren Sie [Java](https://www.java.com/de/download/)
+2. Klonen Sie das Repository
+```bash
+git clone https://github.com/jasontermine/TodoApp.git
+```
+3. Navigieren Sie in den Ordner "M223/backend"
+```bash
+cd TodoApp/backend
+```
+5. Fügen Sie Ihre MySQL Daten in die Datei "application.properties" ein
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/todo
+spring.datasource.username=username
+spring.datasource.password=password
+```
+
+6. Starten Sie das Backend
+```bash
+./mvnw spring-boot:run
+```
+7. Öffnen Sie [http://localhost:8080](http://localhost:8080) um die App im Browser zu sehen.
 
 ### Verwendete Technologien
 - [Spring Security](https://spring.io/projects/spring-security)
@@ -180,7 +175,7 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 
 
 ### Frontend 
-- Login-Seite (/) und Liste aller Todos.
+- Login-Seite (/) und Liste aller Todos (/private).
 - Admin-Seite (/admin) mit Buttons zum Erstellen und Löschen von Todos.
 - Private-Seite (/private) zum einsehen von den erstellten Todos.
   
@@ -199,7 +194,6 @@ Die Seiten wurden aus zeitlichen Gründe einfach gestaltet und erfüllen somit d
 - Verwendung von JWT für sichere Authentifizierung.
 - BCrypt für sichere Passwortverschlüsselung.
 - CORS für sichere Kommunikation zwischen Frontend und Backend.
-
 | Schicht | Beschreibung |
 | --- | --- |
 | controller | REST Controller |
