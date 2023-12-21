@@ -27,8 +27,9 @@ public class WebSecurityConfig {
     @Autowired
     private AuthenticationEntryPoint unauthorizedHandler;
     private final static String[] EVERYONE = { "/public", "/api/auth/**" };
-    private final static String[] SECURE = { "/private/todo", "/admin/**" };
-    private final static String[] ROLES = { "ROLE_USER", "ROLE_ADMIN" };
+    private final static String[] SECURE = { "/private/todo" };
+    private final static String[] ADMIN = { "/admin/**" };
+    private final static String[] ROLES = { "USER", "ADMIN" };
 
     /**
      * Erstellt einen AuthTokenFilter Bean.
@@ -83,7 +84,7 @@ public class WebSecurityConfig {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth.requestMatchers(EVERYONE).permitAll()
-                        .anyRequest().authenticated());
+                        .requestMatchers(SECURE).hasAnyRole(ROLES).requestMatchers(ADMIN).hasRole("ADMIN").anyRequest().authenticated());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authenticationJwtTokenFilter(),
                 UsernamePasswordAuthenticationFilter.class);
