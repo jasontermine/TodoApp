@@ -4,7 +4,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Public, { loader as public_loader} from "./pages/public";
 import Private, { loader as private_loader} from "./pages/private";
-import Admin from "./pages/admin";
+import Admin, { loader as admin_loader} from "./pages/admin";
 import Login from "./pages/login";
 import {
   createBrowserRouter,
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    loader: private_loader,
+    loader: admin_loader,
     element: <Layout><Admin /></Layout>
   },
 ]);

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { createContent, deleteContent } from "../functions/alterContent";
+import { getAdminContent } from "../functions/getContent";
 import {
   MDBBtn,
   MDBModal,
@@ -13,6 +14,15 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import { useState } from "react";
+
+/**
+ * Lädt den privaten Inhalt und gibt ihn als Datenobjekt zurück.
+ * @returns {Promise<{ data: Array }>} Das Datenobjekt mit dem privaten Inhalt.
+ */
+export async function loader() {
+  const data = await getAdminContent();
+  return { data };
+}
 
 /**
  * Komponente für die Admin-Seite.

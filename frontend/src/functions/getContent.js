@@ -30,3 +30,18 @@ export async function getPrivateContent() {
   });
   return data;
 }
+
+/**
+ * Ruft admin Inhalte ab.
+ * @returns {Promise<Array>} Ein Array mit den abgerufenen Daten.
+ */
+export async function getAdminContent() {
+  let data = [];
+
+  const token = JSON.parse(localStorage.getItem("user")).accessToken;
+
+  await client.get("/admin/todos", { headers: {"Authorization": `Bearer ${token}`, mode: "cors" } }).then((response) => {
+    data = response.data;
+  });
+  return data;
+}
