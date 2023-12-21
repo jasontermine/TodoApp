@@ -216,8 +216,7 @@ Dieser Test überprüft, ob die States funktional sind.
 
 
 ### Backend 
-- JUnit und Mockito.
-- AdminController-Tests.
+- JUnit und Mockito. <br />
 Die Tests sind im Ordner "backend/src/test/java/com/wiss/m223" zu finden.
 Die Tests sind mit dem Framework [JUnit](https://junit.org/junit5/) und [Mockito](https://site.mockito.org/) geschrieben. Die Tests können wie folgt ausgeführt werden.
 ```bash
@@ -228,8 +227,10 @@ cd TodoApp/backend
 #### Vorhandene Tests
 Für Die folgenden Schichten, wurden Tests geschrieben:
 - AdminController
+- SignupRequest
+- UserDetailsServiceImpl
 
-Diese Schicht enthält zwei Tests.
+Diese Schicht enthält fünf Tests.
 Genaurere Informationen zu den Tests dieser Klasse ist im Klassenkommentar zu finden.
 
 ## 5. Kontrolle
