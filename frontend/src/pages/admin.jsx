@@ -82,12 +82,12 @@ export default function Admin() {
   };
 
   /**
-   * Funktion zum Öffnen/Schließen des Modals zum Erstellen eines Todos.
+   * Funktion zum Öffnen/Schliessen des Modals zum Erstellen eines Todos.
    */
   const toggleOpen = () => setBasicModal(!basicModal);
 
   /**
-   * Funktion zum Öffnen/Schließen des Modals zum Löschen eines Todos.
+   * Funktion zum Öffnen/Schliessen des Modals zum Löschen eines Todos.
    */
   const toggleOpen2 = () => setBasicModal2(!basicModal2);
 
