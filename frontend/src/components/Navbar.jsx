@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AuthService from "../functions/auth.service"
 import {
   MDBContainer,
   MDBNavbar,
@@ -33,11 +34,18 @@ export default function App() {
         </MDBNavbarToggler>
         <MDBCollapse navbar open={openNav}>
           <MDBNavbarNav>
+            {/* Zeigt den 'Login' Link, wenn im localStorage kein 'user' gibt, ansonsten 'Logout' zum abmelden.  */}
+            { localStorage.getItem("user") === null ? 
             <MDBNavbarItem>
               <MDBNavbarLink aria-current='page' href='/'>
                 Login
               </MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> :
+            <MDBNavbarItem>
+              <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
+                Logout
+              </MDBNavbarLink>
+            </MDBNavbarItem>}
             <MDBNavbarItem>
               <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
             </MDBNavbarItem>
