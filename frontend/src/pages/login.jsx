@@ -75,6 +75,7 @@ export default function Login() {
             <MDBInput
               value={password}
               name="lname"
+              type="password"
               onChange={onChangePassword}
               id="validationCustom02"
               required

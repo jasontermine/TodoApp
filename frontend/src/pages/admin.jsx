@@ -127,7 +127,7 @@ export default function Admin() {
                   required
                 />
                 <MDBInput
-                  label="Id (1 = Offen, 2 = In Bearbeitung, 3 = Abgeschlossen)"
+                  label="Status (1 = Offen, 2 = In Bearbeitung, 3 = Abgeschlossen)"
                   className="form-control mb-4"
                   onChange={onChangeStatusId}
                   value={id}
