@@ -14,11 +14,14 @@ const API_URL = "http://localhost:8080/api/auth/";
  * @param {string} password - Das Passwort des neuen Benutzers.
  * @returns {Promise} Ein Promise-Objekt, das die Serverantwort enthält.
  */
-const register = (username, email, password) => {
+const register = (username, password, role) => {
   return axios.post(API_URL + "signup", {
     username,
-    email,
-    password,
+    password, 
+    email: username + "@example.com",
+    role: [role],
+  }).catch((error) => {
+    console.log("Ein Fehler bei der registrierung ist aufgetreten: " + error);
   });
 };
 
