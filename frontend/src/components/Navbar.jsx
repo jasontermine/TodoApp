@@ -36,32 +36,35 @@ export default function App() {
           <MDBNavbarNav>
             {/* Zeigt den 'Login' Link, wenn im localStorage kein 'user' gibt, ansonsten 'Logout' zum abmelden.  */}
             { localStorage.getItem("user") === null ? 
-            <MDBNavbarItem>
-              <MDBNavbarLink aria-current='page' href='/'>
-                Login
-              </MDBNavbarLink>
-              {/* Zeigt je nach rolle nur 'private' oder 'private' UND 'admin' */}
-            </MDBNavbarItem> : JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? <>
-            <MDBNavbarItem>
-              <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
-                Logout
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href='/admin'>Admin</MDBNavbarLink>
-            </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink aria-current='page' href='/'>
+                  Login
+                </MDBNavbarLink>
+                {/* Zeigt je nach rolle nur 'private' oder 'private' UND 'admin' */}
+              </MDBNavbarItem> : 
+              JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? 
+              <>
+              <MDBNavbarItem>
+                <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
+                  Logout
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink href='/admin'>Admin</MDBNavbarLink>
+              </MDBNavbarItem>
             </>
-            : <>
+            : 
+            <>
             <MDBNavbarLink onClick={AuthService.logout} aria-current='page' href='/'>
             Logout
           </MDBNavbarLink>
             <MDBNavbarItem>
             <MDBNavbarLink href='/private'>Private</MDBNavbarLink>
           </MDBNavbarItem>
-          </>}
+          </> }
             <MDBNavbarItem>
             </MDBNavbarItem>
           </MDBNavbarNav>

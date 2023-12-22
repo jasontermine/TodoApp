@@ -28,9 +28,10 @@ export default function Private() {
           <MDBCard key={item.id} className="mb-5 shadow-5-strong">
           <MDBCardBody>
             {
-              JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? <div className="float-end" style={{cursor: "pointer"}} onClick={() => deleteContent(item.id).then(() => {window.location.reload()}) }>
-              <MDBIcon  color="danger" fas icon="trash" />
-            </div> : null
+              JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? 
+                <div className="float-end" style={{cursor: "pointer"}} onClick={() => deleteContent(item.id).then(() => {window.location.reload()}) }>
+                  <MDBIcon  color="danger" fas icon="trash" />
+                </div> : null
             }
             <MDBCardTitle>{item.name} - Issue #{item.id}</MDBCardTitle>
             <MDBCardText>
