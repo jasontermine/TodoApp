@@ -84,13 +84,10 @@ export default function Login() {
           </MDBValidationItem>
           <div
             className="position-absolute start-50"
-            style={{ marginLeft: "-11rem" }}
+            style={{ marginLeft: "-4.5rem" }}
           >
             <MDBBtn className="" type="submit" onClick={handleSubmit}>
-              Submit form
-            </MDBBtn>
-            <MDBBtn className="ms-5" type="reset">
-              Reset form
+              Login
             </MDBBtn>
           </div>
         </div>
