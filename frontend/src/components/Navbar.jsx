@@ -36,12 +36,20 @@ export default function App() {
           <MDBNavbarNav>
             {/* Zeigt den 'Login' Link, wenn im localStorage kein 'user' gibt, ansonsten 'Logout' zum abmelden.  */}
             { localStorage.getItem("user") === null ? 
+            <>
               <MDBNavbarItem>
                 <MDBNavbarLink aria-current='page' href='/'>
                   Login
                 </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink aria-current='page' href='/signup'>
+                  Signup
+                </MDBNavbarLink>
                 {/* Zeigt je nach rolle nur 'private' oder 'private' UND 'admin' */}
-              </MDBNavbarItem> : 
+              </MDBNavbarItem>
+              </>
+               : 
               JSON.parse(localStorage.getItem("user"))?.roles?.find(role => role === "ROLE_ADMIN") ? 
               <>
               <MDBNavbarItem>
