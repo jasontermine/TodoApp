@@ -170,7 +170,7 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 
 | Methode | URL | Beschreibung | Authentifizierung | Rolle| Parameter |
 | --- | --- | --- | --- | --- | --- |
-| POST | /api/auth/signup | Registriert einen neuen Benutzer | Nein | Keine | username, email, password |
+| POST | /api/auth/signup | Registriert einen neuen Benutzer | Nein | Keine | username, password, role |
 | POST | /api/auth/signin | Loggt einen Benutzer ein | Nein | Keine | username, password |
 | POST | /api/auth/signout | Loggt einen Benutzer aus | Ja | USER oder ADMIN | |
 | GET | /private/todos | Gibt alle Todo's zurück | Ja | USER oder ADMIN | |
@@ -181,12 +181,14 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 
 ### Frontend 
 - Login-Seite (/) und Liste aller Todos.
+- Signup-Seite (/signup) um sich zu Registrieren.
 - Admin-Seite (/admin) mit Buttons zum Erstellen und Löschen von Todos.
 - Private-Seite (/private) zum einsehen von den erstellten Todos.
   
 | URL | Beschreibung | Authentifizierung |
 | --- | --- | --- |
 | / | Login Seite | Nein |
+| /signup | Seite um sich registrieren zu können | Nein |
 | /public | Easter Egg ;) | Nein |
 | /private | Liste aller Todo's. Für Admin, besteht die möglichkeit, Todos direkt zu löschen, mittels Trash-Button  | Ja |
 | /admin | Zwei buttons zur Auswahl, ob man ein Todo erstellen möchte oder eins löschen | Ja |
