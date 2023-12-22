@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Public, { loader as public_loader} from "./pages/public";
 import Private, { loader as private_loader} from "./pages/private";
 import Admin, { loader as admin_loader} from "./pages/admin";
+import Signup from "./pages/signup";
 import Login from "./pages/login";
 import {
   createBrowserRouter,
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout><Login /></Layout>
+  },
+  {
+    path: "/signup",
+    element: <Layout><Signup /></Layout>
   },
   {
     path: "/public",
