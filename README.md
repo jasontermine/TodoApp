@@ -6,7 +6,7 @@ Dieses Projekt ist eine Todo App, welches Benutzern mit den erforderlichen Berec
 ## Inhaltsverzeichnis
 - [Todo App](#todo-app)
     - [Beschreibung Projekt](#beschreibung-projekt)
-    - [Informieren](#informieren-1)
+    - [Informieren](#1-informieren)
         - [Beschreibung](#beschreibung)
         - [Verwendete Technologien](#verwendete-technologien)
         - [Akzeptanzkriterien](#akzeptanzkriterien)
