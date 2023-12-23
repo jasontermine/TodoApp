@@ -161,6 +161,8 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 
 ### RBAC (Role-Based Access Control) 
 - RBAC-Diagramm zur Visualisierung der Rollen und Berechtigungen.<br/>
+Nur Benutzer mit der Admin Rolle sind Berechtigt, Todos zu erstellen, löschen und lesen. <br/>
+Benutzer mit der User Rolle können Todo's nur lesen.
 ![RBAC Diagram](../resources/RBAC_diagram.png)
 
 ### REST API 
