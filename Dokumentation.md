@@ -273,7 +273,7 @@ Da die Datenbank durch Spring Boot generiert wurde, kam zur Entwicklung nur [MyS
 ### Frontend (React)
 Da ich in meinem Betrieb bereits Erfahrung habe mit Vue.js, war das entwickeln vom Frontend mit React nicht so ein Problem. Vorallem die handhabung mit den REST, States und die Logik hinter der Komponentenbaserte Webentwicklung. Trotzdem benötigte ich für gewisse sachen Hilfe von der [React Dokumentation](https://reactjs.org/docs/getting-started.html).
 
-Aufgrund der sehr begrenzter Zeit für dieses Projekt, musste ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) nutzen.
+Aufgrund sehr begrenzter Zeit für dieses Projekt, musste ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) nutzen.
 
 Hilfe wurde von folgenden Mitschülern erhalten:
 - Christoph Knuchel
@@ -284,7 +284,7 @@ Hilfe wurde von folgenden Lehrern erhalten:
 ### Backend (Spring Boot)
 Da ich bereits Erfahrungen gesammelt habe im Modul 320 (Objektorientiert Programmieren) und Modul 295 (Backend für Applikationen realisieren), welche auch Springboot und Maven enthielten, war das realisieren des Backends für dieses Projekt nicht so Kompliziert. Jedoch habe ich von der [Spring Boot Dokumentation](https://spring.io/projects/spring-boot) etwas hilfe benötigt.
 
-Aufgrund der sehr begrenzter Zeit für dieses Projekt, habe ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) zurückgegriffen.
+Aufgrund sehr begrenzter Zeit für dieses Projekt, musste ich teilweise [ChatGPT](https://chat.openai.com/) und [GitHUb Copilot](https://copilot.github.com/) nutzen.
 
 Hilfe wurde von folgenden Mitschülern erhalten (Gott sei Dank):
 - Christop Knuchel
