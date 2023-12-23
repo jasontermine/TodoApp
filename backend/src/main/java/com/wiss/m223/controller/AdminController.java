@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wiss.m223.model.Todo;
 import com.wiss.m223.repository.TodoRepository;
 
+import jakarta.transaction.Transactional;
+
 /**
  * Der AdminController ist für die Verwaltung der Todos zuständig.
  */
@@ -45,6 +47,7 @@ public class AdminController {
 	 * @param todo Das zu erstellende Todo
 	 * @return Das erstellte Todo
 	 */
+	@Transactional
 	@PostMapping("/todos/create")
 	public ResponseEntity<Todo> createTodo(@RequestBody Todo todo) {
 
