@@ -157,11 +157,11 @@ Die Datenbank besteht aus 5 Tabellen. Die Tabelle "user" enthält alle Benutzer.
 
 ### ERD 
 - ER-Diagramm für die Datenbankstruktur.<br/>
-![Datenbank Diagramm](resources/ERD.png)
+![Datenbank Diagramm](../resources/ERD.png)
 
 ### RBAC (Role-Based Access Control) 
 - RBAC-Diagramm zur Visualisierung der Rollen und Berechtigungen.<br/>
-![RBAC Diagram](resources/RBAC_diagram.png)
+![RBAC Diagram](../resources/RBAC_diagram.png)
 
 ### REST API 
 - Authentifizierung über /api/auth/signup und /api/auth/signin.
